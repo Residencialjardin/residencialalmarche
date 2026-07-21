@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Residencial Almarche · Edificio Almarche 31, Benetússer (Valencia)</title>
+<meta name="description" content="7 viviendas de 1, 2 y 3 dormitorios en Benetússer, a minutos del centro de Valencia. Plazas de garaje, azotea comunitaria y acabados de alta calidad.">
+
+<!-- SEO -->
+<meta property="og:title" content="Residencial Almarche · Benetússer, Valencia">
+<meta property="og:description" content="Edificio Almarche 31 · 7 viviendas de 1, 2 y 3 dormitorios en pleno corazón de Benetússer.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/hero.jpg">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://residencialalmarche.github.io/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ApartmentComplex",
+  "name": "Residencial Almarche - Edificio Almarche 31",
+  "description": "Edificio residencial de 7 viviendas de 1, 2 y 3 dormitorios en Benetússer, Valencia.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Calle Francisco Almarche 31",
+    "addressLocality": "Benetússer",
+    "addressRegion": "Valencia",
+    "addressCountry": "ES"
+  },
+  "numberOfAccommodationUnits": 7
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#3a3226;
+    --olive:#a68a2f;
+    --olive-dark:#6b5a1f;
+    --cream:#eeeae2;
+    --brown-dark:#3f3a2e;
+    --brown-mid:#786a4f;
+    --white:#ffffff;
+    --line: rgba(58,50,38,0.14);
+    --maxw: 1240px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Jost', sans-serif;
+    color:var(--ink);
+    background:var(--white);
+    font-weight:300;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.serif{ font-family:'Cormorant Garamond', serif; font-weight:500; }
+  a{ color:inherit; text-decoration:none; }
+  img{ max-width:100%; display:block; }
+  .container{ max-width:var(--maxw); margin:0 auto; padding:0 32px; }
+  .eyebrow{
+    font-size:11px; letter-spacing:0.28em; text-transform:uppercase;
+    color:var(--brown-mid); font-weight:500;
+  }
+  .btn{
+    display:inline-block; padding:14px 30px; border:1px solid var(--ink);
+    font-size:13px; letter-spacing:0.1em; text-transform:uppercase;
+    transition:all .25s ease; cursor:pointer; background:transparent;
+    font-family:'Jost', sans-serif; font-weight:400;
+  }
+  .btn:hover{ background:var(--ink); color:var(--white); }
+  .btn-solid{ background:var(--olive); border-color:var(--olive); color:var(--white); }
+  .btn-solid:hover{ background:var(--olive-dark); border-color:var(--olive-dark); }
+
+  /* ===== NAV ===== */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(255,255,255,0.0);
+    transition:background .3s ease, box-shadow .3s ease;
+    padding:22px 0;
+  }
+  header.scrolled{ background:rgba(255,255,255,0.96); box-shadow:0 1px 0 var(--line); padding:14px 0; backdrop-filter:blur(6px);}
+  nav{ display:flex; align-items:center; justify-content:space-between; max-width:var(--maxw); margin:0 auto; padding:0 32px;}
+  .logo{ font-family:'Cormorant Garamond', serif; font-size:22px; letter-spacing:0.04em; color:var(--white); transition:color .3s ease;}
+  header.scrolled .logo{ color:var(--ink); }
+  .nav-links{ display:flex; gap:34px; align-items:center; }
+  .nav-links a{ font-size:12px; letter-spacing:0.14em; text-transform:uppercase; color:var(--white); transition:color .3s ease; }
+  header.scrolled .nav-links a{ color:var(--ink); }
+  .nav-links a:hover{ color:var(--olive); }
+  .lang-switch{ display:flex; gap:6px; font-size:12px; letter-spacing:0.08em;}
+  .lang-switch button{ background:none; border:none; color:var(--white); opacity:.55; cursor:pointer; font-family:'Jost',sans-serif; font-size:12px; padding:2px;}
+  .lang-switch button.active{ opacity:1; text-decoration:underline; text-underline-offset:4px;}
+  header.scrolled .lang-switch button{ color:var(--ink); }
+  .nav-toggle{ display:none; background:none; border:none; color:var(--white); font-size:24px; cursor:pointer;}
+  header.scrolled .nav-toggle{ color:var(--ink); }
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative; height:100vh; min-height:640px; display:flex; align-items:flex-end;
+    background:url('assets/hero.jpg') center/cover no-repeat;
+  }
+  .hero::after{
+    content:''; position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(20,17,10,0.35) 0%, rgba(20,17,10,0.05) 30%, rgba(20,17,10,0.55) 100%);
+  }
+  .hero-content{ position:relative; z-index:2; color:var(--white); padding-bottom:80px; width:100%; }
+  .hero-content .eyebrow{ color:#e7dfca; }
+  .hero-content h1{ font-size:clamp(42px,7vw,84px); line-height:1.02; margin:10px 0 6px; }
+  .hero-content .place{ font-size:clamp(18px,2.4vw,26px); font-family:'Cormorant Garamond',serif; font-style:italic; color:#e7dfca; margin-bottom:28px;}
+  .hero-stats{ display:flex; gap:44px; flex-wrap:wrap; }
+  .hero-stats div{ border-left:1px solid rgba(255,255,255,0.35); padding-left:16px;}
+  .hero-stats .num{ font-family:'Cormorant Garamond',serif; font-size:26px; }
+  .hero-stats .lbl{ font-size:11px; text-transform:uppercase; letter-spacing:.14em; opacity:.8; }
+  .scroll-cue{ position:absolute; bottom:26px; left:50%; transform:translateX(-50%); z-index:2; color:var(--white); font-size:11px; letter-spacing:.2em; text-transform:uppercase; writing-mode:vertical-rl; opacity:.75;}
+  .scroll-cue::after{ content:''; display:block; width:1px; height:40px; background:var(--white); margin:10px auto 0;}
+
+  /* ===== SECTION generic ===== */
+  section{ padding:110px 0; }
+  .section-head{ max-width:640px; margin-bottom:56px; }
+  .section-head h2{ font-size:clamp(32px,4vw,48px); margin-top:8px; }
+  .section-head p{ margin-top:18px; color:var(--brown-mid); font-size:16px; }
+  .dark{ background:var(--brown-dark); color:#e9e4d8; }
+  .dark .eyebrow{ color:#c9bd9c; }
+  .dark .section-head p{ color:#c9bd9c; }
+  .olive-bg{ background:#918224; color:#fff; }
+
+  /* ===== INTRO / SENTIRSE EN CASA ===== */
+  .intro{ display:grid; grid-template-columns:1.1fr .9fr; gap:70px; align-items:center; }
+  .intro img{ border-radius:2px; }
+  .intro-text h2{ font-size:clamp(34px,4.4vw,54px); }
+  .intro-text p{ margin-top:22px; color:var(--brown-mid); font-size:16px; }
+
+  /* ===== STATS BAND ===== */
+  .stats-band{ padding:70px 0; }
+  .stats-band .container{ display:flex; justify-content:space-around; flex-wrap:wrap; gap:40px; text-align:center;}
+  .stat-item .num{ font-family:'Cormorant Garamond',serif; font-size:40px; color:#e9e4d8; }
+  .stat-item .lbl{ margin-top:8px; font-size:12px; text-transform:uppercase; letter-spacing:.16em; color:#c9bd9c;}
+
+  /* ===== GALLERY ===== */
+  .gallery{ display:grid; grid-template-columns:repeat(6,1fr); gap:14px; }
+  .gallery img{ width:100%; height:100%; object-fit:cover; border-radius:2px;}
+  .g1{ grid-column:span 4; grid-row:span 2; }
+  .g2{ grid-column:span 2; grid-row:span 1; }
+  .g3{ grid-column:span 2; grid-row:span 1; }
+  .g4{ grid-column:span 3; grid-row:span 1; }
+  .g5{ grid-column:span 3; grid-row:span 1; }
+  @media(max-width:760px){
+    .gallery{ grid-template-columns:repeat(2,1fr);}
+    .g1,.g2,.g3,.g4,.g5{ grid-column:span 2; }
+  }
+
+  /* ===== LOCATION ===== */
+  .location{ display:grid; grid-template-columns:.85fr 1.15fr; gap:0; align-items:stretch;}
+  .location-text{ padding:80px 60px; background:var(--cream); display:flex; flex-direction:column; justify-content:center;}
+  .location-text h2{ font-size:clamp(30px,3.6vw,44px);}
+  .location-text p{ margin-top:18px; color:var(--brown-mid); }
+  .location img{ width:100%; height:100%; object-fit:cover; min-height:420px;}
+  .poi-list{ margin-top:26px; }
+  .poi-list li{ list-style:none; display:flex; gap:14px; padding:9px 0; border-bottom:1px solid var(--line); font-size:14px;}
+  .poi-list .n{ font-family:'Cormorant Garamond',serif; color:var(--olive); font-weight:600; width:22px;}
+
+  /* ===== EDIFICIO / PLANTAS ===== */
+  .floors{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:40px;}
+  .floor-card{ border:1px solid var(--line); padding:18px; text-align:center;}
+  .floor-card img{ width:100%; margin-bottom:14px; background:#f6f4ef;}
+  .floor-card .name{ font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--brown-mid);}
+  .legend{ display:flex; gap:26px; margin-top:36px; flex-wrap:wrap;}
+  .legend div{ display:flex; align-items:center; gap:10px; font-size:13px; color:var(--brown-mid);}
+  .swatch{ width:16px; height:16px; display:inline-block; }
+
+  /* ===== UNITS / ACCORDION ===== */
+  .unit{ border-top:1px solid var(--line); }
+  .unit:last-child{ border-bottom:1px solid var(--line); }
+  .unit-head{
+    display:flex; align-items:center; justify-content:space-between; gap:24px;
+    padding:26px 4px; cursor:pointer; user-select:none;
+  }
+  .unit-head .left{ display:flex; align-items:baseline; gap:22px; flex-wrap:wrap;}
+  .unit-head .id{ font-family:'Cormorant Garamond',serif; font-size:30px; color:var(--olive); min-width:120px;}
+  .unit-head .meta{ font-size:13px; color:var(--brown-mid); text-transform:uppercase; letter-spacing:.06em;}
+  .unit-head .price{ font-family:'Cormorant Garamond',serif; font-size:22px; white-space:nowrap;}
+  .unit-head .plus{ font-size:22px; color:var(--olive); transition:transform .3s ease; flex-shrink:0;}
+  .unit.open .plus{ transform:rotate(45deg); }
+  .unit-body{ max-height:0; overflow:hidden; transition:max-height .4s ease; }
+  .unit.open .unit-body{ max-height:900px; }
+  .unit-body-inner{ display:grid; grid-template-columns:1.3fr 1fr; gap:40px; padding:0 4px 40px; align-items:center;}
+  .unit-body-inner img{ background:#f6f4ef; border:1px solid var(--line); }
+  .unit-specs{ list-style:none; font-size:14px; }
+  .unit-specs li{ display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px dashed var(--line); color:var(--brown-mid);}
+  .unit-specs li b{ color:var(--ink); font-weight:400; }
+  @media(max-width:760px){ .unit-body-inner{ grid-template-columns:1fr; } .unit-head .id{min-width:auto;} }
+
+  /* ===== CALIDADES ===== */
+  .cal-grid{ display:grid; grid-template-columns:1fr 1fr; gap:60px; }
+  .cal-list{ margin-top:10px; }
+  .cal-block{ padding:22px 0; border-bottom:1px solid rgba(255,255,255,0.14);}
+  .cal-block h3{ font-size:20px; color:#e9e4d8; margin-bottom:6px; font-weight:500;}
+  .cal-block p{ font-size:14px; color:#c9bd9c; }
+
+  /* ===== CONTACT / FORM ===== */
+  .contact{ display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:flex-start;}
+  .form-group{ margin-bottom:18px; }
+  .form-group label{ display:block; font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--brown-mid); margin-bottom:6px;}
+  .form-group input, .form-group textarea{
+    width:100%; padding:13px 14px; border:1px solid var(--line); background:var(--white);
+    font-family:'Jost',sans-serif; font-size:15px; color:var(--ink);
+  }
+  .form-group input:focus, .form-group textarea:focus{ outline:none; border-color:var(--olive); }
+  #formMsg{ margin-top:14px; font-size:14px; }
+  .agent-card{ background:var(--cream); padding:40px; }
+  .agent-card .name{ font-family:'Cormorant Garamond',serif; font-size:26px; margin-bottom:4px;}
+  .agent-card .role{ font-size:12px; text-transform:uppercase; letter-spacing:.12em; color:var(--brown-mid); margin-bottom:22px;}
+  .agent-card a{ display:block; padding:8px 0; font-size:15px; }
+  .agent-card .disclaimer{ margin-top:28px; font-size:12px; color:var(--brown-mid); line-height:1.6; border-top:1px solid var(--line); padding-top:20px;}
+
+  footer{ background:var(--brown-dark); color:#c9bd9c; padding:36px 0; text-align:center; font-size:13px;}
+  footer a{ text-decoration:underline; }
+
+  [data-lang="en"]{ display:none; }
+  html[lang="en"] [data-lang="es"]{ display:none; }
+  html[lang="en"] [data-lang="en"]{ display:block; }
+  html[lang="en"] span[data-lang="en"], html[lang="en"] em[data-lang="en"]{ display:inline; }
+
+  @media(max-width:900px){
+    .intro, .location, .cal-grid, .contact{ grid-template-columns:1fr; }
+    .location-text{ padding:60px 28px; order:2;}
+    .location img{ order:1; min-height:320px;}
+    .nav-links{ display:none; }
+    section{ padding:70px 0; }
+    .floors{ grid-template-columns:repeat(2,1fr); }
+  }
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <nav>
+    <a href="#top" class="logo">Almarche <span class="serif" style="font-style:italic;">31</span></a>
+    <div class="nav-links">
+      <a href="#edificio" data-lang="es">El Edificio</a><a href="#edificio" data-lang="en">The Building</a>
+      <a href="#viviendas" data-lang="es">Viviendas</a><a href="#viviendas" data-lang="en">Homes</a>
+      <a href="#calidades" data-lang="es">Calidades</a><a href="#calidades" data-lang="en">Finishes</a>
+      <a href="#ubicacion" data-lang="es">Ubicación</a><a href="#ubicacion" data-lang="en">Location</a>
+      <a href="#contacto" class="btn" style="padding:10px 20px;" data-lang="es">Contacto</a>
+      <a href="#contacto" class="btn" style="padding:10px 20px;" data-lang="en">Contact</a>
+      <div class="lang-switch">
+        <button onclick="setLang('es')" id="langEs" class="active">ES</button>/<button onclick="setLang('en')" id="langEn">EN</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-content">
+    <div class="container">
+      <p class="eyebrow" data-lang="es">Dossier · Benetússer, Valencia</p>
+      <p class="eyebrow" data-lang="en">Dossier · Benetússer, Valencia</p>
+      <h1>Residencial Almarche</h1>
+      <p class="place" data-lang="es">Edificio Almarche 31 — Benetússer</p>
+      <p class="place" data-lang="en">Almarche 31 Building — Benetússer</p>
+      <div class="hero-stats">
+        <div><div class="num">7</div><div class="lbl" data-lang="es">Viviendas</div><div class="lbl" data-lang="en">Homes</div></div>
+        <div><div class="num">4</div><div class="lbl" data-lang="es">Plazas de garaje</div><div class="lbl" data-lang="en">Parking spaces</div></div>
+        <div><div class="num">46–90 m²</div><div class="lbl" data-lang="es">Superficies</div><div class="lbl" data-lang="en">Sizes</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue" data-lang="es">Descubre</div>
+  <div class="scroll-cue" data-lang="en">Discover</div>
+</section>
+
+<!-- INTRO -->
+<section id="edificio">
+  <div class="container intro">
+    <img src="assets/salon_1.jpg" alt="Salón comedor Residencial Almarche">
+    <div class="intro-text">
+      <p class="eyebrow" data-lang="es">Sentirse en casa</p>
+      <p class="eyebrow" data-lang="en">Feel at home</p>
+      <h2 data-lang="es">Vivir en el corazón<br>de Benetússer</h2>
+      <h2 data-lang="en">Living in the heart<br>of Benetússer</h2>
+      <p data-lang="es">Ubicado en la Calle Francisco Almarche 31, este proyecto residencial se sitúa en pleno corazón de Benetússer, un municipio consolidado y tranquilo del área metropolitana de Valencia. A tan solo unos minutos de la capital, la zona cuenta con excelentes comunicaciones tanto por carretera como por transporte público, lo que permite disfrutar de la proximidad a la ciudad sin renunciar a la calma y comodidad de un entorno residencial. El barrio dispone de todos los servicios esenciales, así como comercios, colegios, zonas verdes y equipamientos.</p>
+      <p data-lang="en">Located on Calle Francisco Almarche 31, this residential project sits in the heart of Benetússer, a settled and quiet town in the Valencia metropolitan area. Just minutes from the capital, the area has excellent road and public transport connections, offering proximity to the city without giving up the calm of a residential setting. The neighbourhood has every essential service — shops, schools, green spaces and amenities.</p>
+      <div style="margin-top:30px;">
+        <a href="#viviendas" class="btn" data-lang="es">Ver viviendas</a>
+        <a href="#viviendas" class="btn" data-lang="en">See homes</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<div class="dark stats-band">
+  <div class="container">
+    <div class="stat-item"><div class="num">7</div><div class="lbl" data-lang="es">Viviendas de 1, 2 y 3 dorm.</div><div class="lbl" data-lang="en">1, 2 & 3 bed homes</div></div>
+    <div class="stat-item"><div class="num">4</div><div class="lbl" data-lang="es">Plazas de garaje</div><div class="lbl" data-lang="en">Parking spaces</div></div>
+    <div class="stat-item"><div class="num">124 m²</div><div class="lbl" data-lang="es">Azotea comunitaria</div><div class="lbl" data-lang="en">Communal roof terrace</div></div>
+    <div class="stat-item"><div class="num">46–90 m²</div><div class="lbl" data-lang="es">Superficies útiles</div><div class="lbl" data-lang="en">Usable floor areas</div></div>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow" data-lang="es">Interiores</p>
+      <p class="eyebrow" data-lang="en">Interiors</p>
+      <h2 data-lang="es">Diseño contemporáneo,<br>acabados de calidad</h2>
+      <h2 data-lang="en">Contemporary design,<br>quality finishes</h2>
+    </div>
+    <div class="gallery">
+      <img class="g1" src="assets/cocina_1.jpg" alt="Cocina comedor">
+      <img class="g2" src="assets/dorm_1.jpg" alt="Dormitorio">
+      <img class="g3" src="assets/bano_1.jpg" alt="Baño">
+      <img class="g4" src="assets/salon_2.jpg" alt="Salón">
+      <img class="g5" src="assets/terraza_2.jpg" alt="Fachada">
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section id="ubicacion" style="padding:0;">
+  <div class="location">
+    <div class="location-text">
+      <p class="eyebrow" data-lang="es">Ubicación</p>
+      <p class="eyebrow" data-lang="en">Location</p>
+      <h2 data-lang="es">Benetússer</h2>
+      <h2 data-lang="en">Benetússer</h2>
+      <p data-lang="es">C/ Francisco Almarche 31, Benetússer, Valencia — a minutos del centro de Valencia, con acceso directo por la CV-400 y la V-31, y estación de Metrovalencia Alfafar-Benetússer a un paseo.</p>
+      <p data-lang="en">C/ Francisco Almarche 31, Benetússer, Valencia — minutes from downtown Valencia, with direct access via the CV-400 and V-31, and the Alfafar-Benetússer Metrovalencia station within walking distance.</p>
+      <ul class="poi-list">
+        <li><span class="n">01</span><span data-lang="es">Plaza Cardenal Benlloch</span><span data-lang="en">Plaza Cardenal Benlloch</span></li>
+        <li><span class="n">02</span><span data-lang="es">Ayuntamiento de Benetússer</span><span data-lang="en">Benetússer Town Hall</span></li>
+        <li><span class="n">03</span><span data-lang="es">Mercado Municipal de Benetússer</span><span data-lang="en">Benetússer Municipal Market</span></li>
+        <li><span class="n">04</span><span data-lang="es">Jardín — plaza</span><span data-lang="en">Garden square</span></li>
+        <li><span class="n">05</span><span data-lang="es">Parque infantil y pista deportiva</span><span data-lang="en">Playground & sports court</span></li>
+        <li><span class="n">06</span><span data-lang="es">Parque infantil — plaza</span><span data-lang="en">Playground square</span></li>
+        <li><span class="n">07</span><span data-lang="es">Estación Alfafar–Benetússer</span><span data-lang="en">Alfafar–Benetússer station</span></li>
+        <li><span class="n">08</span><span data-lang="es">Coliseo · Parque de las Palmeras, Alfafar</span><span data-lang="en">Coliseo · Parque de las Palmeras, Alfafar</span></li>
+      </ul>
+    </div>
+    <img src="assets/mapa_barrio.jpg" alt="Mapa Benetússer">
+  </div>
+</section>
+
+<!-- EDIFICIO -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow" data-lang="es">El edificio</p>
+      <p class="eyebrow" data-lang="en">The building</p>
+      <h2 data-lang="es">Cuatro plantas,<br>siete viviendas</h2>
+      <h2 data-lang="en">Four floors,<br>seven homes</h2>
+      <p data-lang="es">Edificio residencial multifamiliar de diseño contemporáneo, compuesto por 7 viviendas de 1, 2 y 3 dormitorios, todas luminosas y con acabados de alta calidad. Planta baja con garaje y una vivienda; plantas primera y segunda con tres viviendas cada una; y azotea comunitaria con terraza accesible, zona de tendido e instalaciones.</p>
+      <p data-lang="en">A contemporary multi-family residential building with 7 homes of 1, 2 and 3 bedrooms, all bright and finished to a high standard. Ground floor with garage and one home; first and second floors with three homes each; and a communal roof terrace with accessible outdoor space, laundry area and installations.</p>
+    </div>
+    <div class="floors">
+      <div class="floor-card"><img src="assets/plano_baja.png" alt="Planta baja"><div class="name" data-lang="es">Planta baja</div><div class="name" data-lang="en">Ground floor</div></div>
+      <div class="floor-card"><img src="assets/plano_primera.png" alt="Planta primera"><div class="name" data-lang="es">Planta primera</div><div class="name" data-lang="en">First floor</div></div>
+      <div class="floor-card"><img src="assets/plano_segunda.png" alt="Planta segunda"><div class="name" data-lang="es">Planta segunda</div><div class="name" data-lang="en">Second floor</div></div>
+    </div>
+    <div class="legend">
+      <div><span class="swatch" style="background:#4a4032;"></span><span data-lang="es">Garaje</span><span data-lang="en">Garage</span></div>
+      <div><span class="swatch" style="background:#c9bfa5;"></span><span data-lang="es">Viviendas</span><span data-lang="en">Homes</span></div>
+      <div><span class="swatch" style="background:#a68a2f;"></span><span data-lang="es">Zonas comunes</span><span data-lang="en">Common areas</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- VIVIENDAS ACCORDION -->
+<section id="viviendas" style="background:var(--cream);">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow" data-lang="es">Tipologías</p>
+      <p class="eyebrow" data-lang="en">Unit types</p>
+      <h2 data-lang="es">Las 7 viviendas</h2>
+      <h2 data-lang="en">The 7 homes</h2>
+      <p data-lang="es">Consulta la distribución, superficies y precio de cada vivienda. Precios orientativos sujetos a disponibilidad.</p>
+      <p data-lang="en">Check the layout, floor areas and price of each home. Indicative prices, subject to availability.</p>
+    </div>
+
+    <div id="unitsList"></div>
+  </div>
+</section>
+
+<!-- CALIDADES -->
+<section id="calidades" class="dark">
+  <div class="container cal-grid">
+    <div>
+      <img src="assets/calidades_1.jpg" alt="Calidades" style="width:100%; height:100%; object-fit:cover; min-height:360px;">
+    </div>
+    <div>
+      <p class="eyebrow" data-lang="es">Calidades</p>
+      <p class="eyebrow" data-lang="en">Finishes</p>
+      <h2 style="color:#e9e4d8;" data-lang="es">Materiales pensados<br>para durar</h2>
+      <h2 style="color:#e9e4d8;" data-lang="en">Materials built<br>to last</h2>
+      <p style="color:#c9bd9c; margin-top:16px;" data-lang="es">Viviendas diseñadas con un enfoque en la funcionalidad y la durabilidad, empleando materiales resistentes y de bajo mantenimiento. Tonos neutros y naturales que generan una atmósfera cálida y armoniosa.</p>
+      <p style="color:#c9bd9c; margin-top:16px;" data-lang="en">Homes designed with a focus on functionality and durability, using resistant, low-maintenance materials. Neutral, natural tones create a warm, harmonious atmosphere.</p>
+
+      <div class="cal-list">
+        <div class="cal-block">
+          <h3 data-lang="es">Fachadas</h3><h3 data-lang="en">Façades</h3>
+          <p data-lang="es">Cerramiento de fachada con ladrillo caravista combinado con mortero monocapa.</p>
+          <p data-lang="en">Face-brick cladding combined with single-layer mortar render.</p>
+        </div>
+        <div class="cal-block">
+          <h3 data-lang="es">Carpintería exterior</h3><h3 data-lang="en">Exterior joinery</h3>
+          <p data-lang="es">PVC o aluminio con rotura de puente térmico y doble acristalamiento, acabado blanco.</p>
+          <p data-lang="en">PVC or aluminium with thermal break and double glazing, white finish.</p>
+        </div>
+        <div class="cal-block">
+          <h3 data-lang="es">Cocinas</h3><h3 data-lang="en">Kitchens</h3>
+          <p data-lang="es">Mobiliario de melamina, bancada tipo Silestone o similar y fregadero de acero inoxidable.</p>
+          <p data-lang="en">Melamine cabinetry, Silestone-type or similar worktop and stainless steel sink.</p>
+        </div>
+        <div class="cal-block">
+          <h3 data-lang="es">Baños</h3><h3 data-lang="en">Bathrooms</h3>
+          <p data-lang="es">Griferías monomando cromadas, sanitarios de porcelana blanca y plato de ducha antideslizante.</p>
+          <p data-lang="en">Chrome single-lever taps, white porcelain sanitaryware and anti-slip shower tray.</p>
+        </div>
+        <div class="cal-block">
+          <h3 data-lang="es">Equipamiento</h3><h3 data-lang="en">Appliances</h3>
+          <p data-lang="es">Horno, vitrocerámica de inducción, campana extractora integrada y aerotermo para ACS.</p>
+          <p data-lang="en">Oven, induction hob, integrated extractor hood and heat pump for hot water.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contacto">
+  <div class="container contact">
+    <div>
+      <p class="eyebrow" data-lang="es">Contacto</p>
+      <p class="eyebrow" data-lang="en">Contact</p>
+      <h2 data-lang="es">Solicita más información</h2>
+      <h2 data-lang="en">Request more information</h2>
+      <p style="color:var(--brown-mid); margin-top:14px;" data-lang="es">Déjanos tus datos y te contactaremos con la disponibilidad actualizada.</p>
+      <p style="color:var(--brown-mid); margin-top:14px;" data-lang="en">Leave your details and we'll get back to you with current availability.</p>
+
+      <form id="leadForm" style="margin-top:30px;">
+        <div class="form-group">
+          <label data-lang="es">Nombre</label><label data-lang="en">Name</label>
+          <input type="text" id="f_nombre" required>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="f_email" required>
+        </div>
+        <div class="form-group">
+          <label data-lang="es">Teléfono</label><label data-lang="en">Phone</label>
+          <input type="tel" id="f_telefono">
+        </div>
+        <div class="form-group">
+          <label data-lang="es">Vivienda de interés</label><label data-lang="en">Home of interest</label>
+          <select id="f_vivienda" style="width:100%; padding:13px 14px; border:1px solid var(--line); background:var(--white); font-family:'Jost',sans-serif; font-size:15px;">
+            <option value="Indiferente" data-lang="es">Indiferente</option>
+            <option value="Any" data-lang="en">No preference</option>
+            <option value="Vivienda 01">Vivienda 01 · 2 dorm. · 195.000€</option>
+            <option value="Vivienda 02">Vivienda 02 · 3 dorm. · 269.000€</option>
+            <option value="Vivienda 03">Vivienda 03 · 1 dorm. · 145.000€</option>
+            <option value="Vivienda 04">Vivienda 04 · 3 dorm. · 284.000€</option>
+            <option value="Vivienda 05">Vivienda 05 · 3 dorm. · 294.000€</option>
+            <option value="Vivienda 06">Vivienda 06 · 1 dorm. · 164.000€</option>
+            <option value="Vivienda 07">Vivienda 07 · 3 dorm. · 294.000€</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label data-lang="es">Mensaje</label><label data-lang="en">Message</label>
+          <textarea id="f_mensaje" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn btn-solid" data-lang="es">Enviar</button>
+        <button type="submit" class="btn btn-solid" data-lang="en">Send</button>
+        <div id="formMsg"></div>
+      </form>
+    </div>
+
+    <div class="agent-card">
+      <p class="eyebrow" data-lang="es">Comercializa</p>
+      <p class="eyebrow" data-lang="en">Marketed by</p>
+      <div class="name">Vanessa Roca</div>
+      <div class="role">MON Inmobiliaria</div>
+      <a href="tel:+34699597374">📞 699 597 374</a>
+      <a href="mailto:vanessa.roca@mercadodeobranueva.com">✉️ vanessa.roca@mercadodeobranueva.com</a>
+      <div class="disclaimer" data-lang="es">Este documento tiene carácter de información comercial, siendo meramente orientativo, y está sujeto a modificaciones por exigencias administrativas, técnicas o jurídicas derivadas de la obtención de las licencias y permisos necesarios. Las imágenes son orientativas y no vinculantes a nivel contractual.</div>
+      <div class="disclaimer" data-lang="en">This document is commercial information provided for guidance only, and is subject to change for administrative, technical or legal reasons arising from the relevant licences and permits. Images are illustrative and not contractually binding.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p data-lang="es">© 2026 Residencial Almarche — Edificio Almarche 31, Benetússer, Valencia</p>
+    <p data-lang="en">© 2026 Residencial Almarche — Almarche 31 Building, Benetússer, Valencia</p>
+  </div>
+</footer>
+
+<script>
+/* ===== Language switch ===== */
+function setLang(l){
+  document.documentElement.setAttribute('lang', l);
+  document.getElementById('langEs').classList.toggle('active', l==='es');
+  document.getElementById('langEn').classList.toggle('active', l==='en');
+  localStorage.setItem('almarche_lang', l);
+}
+(function(){
+  const saved = localStorage.getItem('almarche_lang') || 'es';
+  setLang(saved);
+})();
+
+/* ===== Header scroll state ===== */
+const header = document.getElementById('siteHeader');
+window.addEventListener('scroll', ()=>{
+  header.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+/* ===== Units data & accordion render ===== */
+const UNITS = [
+  {id:'01', planta_es:'Planta baja', planta_en:'Ground floor', dorm:2, price:'195.000€', img:'plano_viv01.png',
+    util:'54.70 m²', terraza:'9.12 m²', construida:'76.21 m²'},
+  {id:'02', planta_es:'Planta primera', planta_en:'First floor', dorm:3, price:'269.000€', img:'plano_viv02.png',
+    util:'70.65 m²', terraza:'12.93 m²', construida:'103.85 m²'},
+  {id:'03', planta_es:'Planta primera', planta_en:'First floor', dorm:1, price:'145.000€', img:'plano_viv03.png',
+    util:'43.79 m²', terraza:'7.98 m²', construida:'58.67 m²'},
+  {id:'04', planta_es:'Planta primera', planta_en:'First floor', dorm:3, price:'284.000€', extra_es:' · garaje incluido', extra_en:' · parking included', img:'plano_viv04.png',
+    util:'69.26 m²', terraza:'8.60 m²', construida:'97.7 m²'},
+  {id:'05', planta_es:'Planta segunda', planta_en:'Second floor', dorm:3, price:'294.000€', extra_es:' · garaje incluido', extra_en:' · parking included', img:'plano_viv05.png',
+    util:'66.67 m²', terraza:'11.42 m²', construida:'94.08 m²'},
+  {id:'06', planta_es:'Planta segunda', planta_en:'Second floor', dorm:1, price:'164.000€', extra_es:' · garaje incluido', extra_en:' · parking included', img:'plano_viv06.png',
+    util:'37.02 m²', terraza:'8.96 m²', construida:'52.11 m²'},
+  {id:'07', planta_es:'Planta segunda', planta_en:'Second floor', dorm:3, price:'294.000€', extra_es:' · garaje incluido', extra_en:' · parking included', img:'plano_viv07.png',
+    util:'65.17 m²', terraza:'11.37 m²', construida:'92.17 m²'},
+];
+
+const list = document.getElementById('unitsList');
+UNITS.forEach((u, idx)=>{
+  const dormLabelEs = u.dorm === 1 ? '1 dormitorio' : u.dorm + ' dormitorios';
+  const dormLabelEn = u.dorm === 1 ? '1 bedroom' : u.dorm + ' bedrooms';
+  const wrap = document.createElement('div');
+  wrap.className = 'unit';
+  wrap.innerHTML = `
+    <div class="unit-head" data-idx="${idx}">
+      <div class="left">
+        <div class="id">Vivienda ${u.id}</div>
+        <div class="meta">
+          <span data-lang="es">${u.planta_es} · ${dormLabelEs}${u.extra_es||''}</span>
+          <span data-lang="en">${u.planta_en} · ${dormLabelEn}${u.extra_en||''}</span>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:24px;">
+        <div class="price">${u.price}</div>
+        <div class="plus">+</div>
+      </div>
+    </div>
+    <div class="unit-body">
+      <div class="unit-body-inner">
+        <img src="assets/${u.img}" alt="Plano vivienda ${u.id}">
+        <ul class="unit-specs">
+          <li><span data-lang="es">Superficie útil</span><span data-lang="en">Usable area</span><b>${u.util}</b></li>
+          <li><span data-lang="es">Terraza / patio</span><span data-lang="en">Terrace / patio</span><b>${u.terraza}</b></li>
+          <li><span data-lang="es">Superficie construida</span><span data-lang="en">Built area</span><b>${u.construida}</b></li>
+          <li><span data-lang="es">Dormitorios</span><span data-lang="en">Bedrooms</span><b>${u.dorm}</b></li>
+        </ul>
+      </div>
+    </div>
+  `;
+  list.appendChild(wrap);
+});
+
+document.querySelectorAll('.unit-head').forEach(h=>{
+  h.addEventListener('click', ()=>{
+    h.closest('.unit').classList.toggle('open');
+  });
+});
+
+/* ===== Supabase lead capture ===== */
+const SUPABASE_URL = 'https://lbbpnnvwtanurtjqgcqv.supabase.co';
+const SUPABASE_ANON_KEY = 'PASTE_YOUR_SUPABASE_ANON_KEY_HERE';
+
+async function sbPost(table, body){
+  const res = await fetch(`${SUPABASE_URL}/rest/v1/${table}`, {
+    method: 'POST',
+    headers: {
+      'apikey': SUPABASE_ANON_KEY,
+      'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+      'Content-Type': 'application/json',
+      'Prefer': 'return=representation'
+    },
+    body: JSON.stringify(body)
+  });
+  if(!res.ok){ throw new Error(await res.text()); }
+  return res.json();
+}
+
+document.getElementById('leadForm').addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const msgEl = document.getElementById('formMsg');
+  const isEn = document.documentElement.getAttribute('lang') === 'en';
+  msgEl.style.color = 'var(--brown-mid)';
+  msgEl.textContent = isEn ? 'Sending…' : 'Enviando…';
+  try{
+    await sbPost('almarche_leads', {
+      nombre: document.getElementById('f_nombre').value,
+      email: document.getElementById('f_email').value,
+      telefono: document.getElementById('f_telefono').value,
+      vivienda_interes: document.getElementById('f_vivienda').value,
+      mensaje: document.getElementById('f_mensaje').value,
+      origen: 'residencialalmarche.com'
+    });
+    msgEl.style.color = '#4a7a3d';
+    msgEl.textContent = isEn ? 'Thanks — we will be in touch soon.' : 'Gracias — te contactaremos en breve.';
+    document.getElementById('leadForm').reset();
+  }catch(err){
+    msgEl.style.color = '#a33';
+    msgEl.textContent = isEn ? 'Something went wrong. Please try again or contact us directly.' : 'Ha ocurrido un error. Inténtalo de nuevo o contáctanos directamente.';
+    console.error(err);
+  }
+});
+</script>
+
+</body>
+</html>
